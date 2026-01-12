@@ -8,3 +8,11 @@ export const API_OPTIONS = {
     }
 };
 export const CDN_URL = "https://image.tmdb.org/t/p/w300"
+
+export const LANGUAGE_OPTION = [
+    { identifier: "en", name: "English" },
+    { identifier: "hindi", name: "Hindi" },
+    { identifier: "Urdu", name: "Urdu" }
+
+]
+
