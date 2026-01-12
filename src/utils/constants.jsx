@@ -15,4 +15,4 @@ export const LANGUAGE_OPTION = [
     { identifier: "Urdu", name: "Urdu" }
 
 ]
-
+export const OPEN_API_KEY = "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"

@@ -6,7 +6,8 @@ function GPTSearchBar() {
   const langKey = useSelector((store) => store.lang.lang)
   return (
     <div className="z-30 pt-40  flex justify-center px-4">
-      <form className="bg-white/10  backdrop-blur-md  w-full max-w-3xl border-white/10 rounded-lg p-4 flex flex-col sm:flex-row gap-2">
+      <form className="bg-white/10  backdrop-blur-md  w-full max-w-3xl border-white/10 rounded-lg p-4 flex flex-col sm:flex-row gap-2"
+        onSubmit={(e) => e.preventDefault()}>
 
         <input
           className="flex-grow font-bold bg-white p-4 rounded-lg"
@@ -15,7 +16,8 @@ function GPTSearchBar() {
           type="text"
         />
 
-        <button className="bg-red-700 hover:bg-red-800 cursor-pointer text-white font-bold px-10 py-4 rounded-lg">
+        <button className="bg-red-700 hover:bg-red-800 cursor-pointer text-white font-bold px-10 py-4 rounded-lg"
+        onClick="">
           {lang[langKey].search}
         </button>
 

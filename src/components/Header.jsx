@@ -110,7 +110,7 @@ const Header = () => {
     my-2
   `}
         >
-          {showGptSearch ? `🏠${lang[langKey].Home}` : "🤖 GPT Search"}
+          {showGptSearch ? `🏠${lang[langKey].Home}` : `🤖${lang[langKey].gptSearch}`}
         </button>
 
         <button onClick={UserSignOut} className="bg-red-600 hover:bg-red-700 transition px-2 md:px-4 py-1 md:py-2 rounded-md text-white font-bold">
