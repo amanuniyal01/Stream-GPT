@@ -1,39 +1,73 @@
 import React, { useRef } from 'react'
 import lang from '../utils/languageConstant'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import groq from '../utils/groq'
+import { API_OPTIONS } from '../utils/constants'
+import { showGptMovieResults, startGptSearch } from '../utils/gptSlice'
 
 function GPTSearchBar() {
   const langKey = useSelector((store) => store.lang.lang)
   const SearchText = useRef(null)
-const handleGptApiSearch = async () => {
-  try {
-    const userQuery = SearchText.current.value;
-    console.log("User Input:", userQuery);
+  const dispatch = useDispatch()
 
-    const response = await groq.chat.completions.create({
-      model: "llama-3.1-8b-instant",
-      messages: [
-        {
-          role: "user",
-          content:
-            `Suggest 10 latest   movies related to "${userQuery}". 
-             Return comma-separated movie names only don't show me actors names.eg:Dhamaal,Sultan,MAD,Dangal`
-        }
-      ],
-    });
 
-    console.log("FULL GPT RESPONSE:", response);
-    console.log(
-      "MOVIES:",
-      response.choices[0].message.content
-    );
 
-  } catch (err) {
-    console.error("Groq Error:", err);
+  // We will search movies on TMDB
+  const searchTMDBMovies = async (movie) => {
+    const data = await fetch("https://api.themoviedb.org/3/search/movie?query=" + movie + "&include_adult=false&language=en-US&page=1", API_OPTIONS)
+    const json = await data.json()
+    return json.results
+
   }
-  const gptMovies=response.choices[0].message.content
-};
+  const handleGptApiSearch = async () => {
+    try {
+      dispatch(startGptSearch())
+      const userQuery = SearchText.current.value;
+      console.log("User Input:", userQuery);
+
+      const response = await groq.chat.completions.create({
+        model: "llama-3.1-8b-instant",
+        messages: [
+          {
+            role: "user",
+            content: `
+You are a movie name generator.
+
+RULES:
+- Output ONLY movie names
+- NO sentences
+- NO explanations
+- NO numbering
+- NO extra text
+- Separate movies using commas only
+
+Query: "${userQuery}"
+
+Example output:
+Dhamaal,Sultan,MAD,Dangal
+`
+          }
+        ],
+      });
+
+
+
+      const gptMovies = response.choices[0].message.content.replace(/\n/g, "").split(",")
+      console.log(gptMovies)
+      const PromisesMovies = gptMovies.map(movie => searchTMDBMovies(movie))
+      const ResultsTmdb = await Promise.all(PromisesMovies)
+      console.log(ResultsTmdb)
+      dispatch(showGptMovieResults({ gptMovieNames: gptMovies, gptMovieResults: ResultsTmdb }))
+
+
+    } catch (err) {
+      console.error("Groq Error:", err);
+
+
+    }
+
+
+  };
 
 
   return (
