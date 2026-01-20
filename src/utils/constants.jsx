@@ -15,4 +15,4 @@ export const LANGUAGE_OPTION = [
     { identifier: "Urdu", name: "Urdu" }
 
 ]
-export const GPT_API_KEY = "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"
+
