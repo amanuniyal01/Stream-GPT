@@ -10,7 +10,7 @@ const UseHorrorMovies = () => {
         const data = await fetch('https://api.themoviedb.org/3/discover/movie?with_genres=27&page=1', API_OPTIONS)
 
         const json = await data.json();
-        console.log(json)
+  
 
         dispatch(addHorrorMovies(json.results))
     }

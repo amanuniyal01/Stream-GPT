@@ -4,6 +4,7 @@ import Header from './Header'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Browser from './Browser'
 import GPTSearch from './GPTSearch'
+import MovieList from './MovieList'
 
 
 const Body = () => {
@@ -12,10 +13,10 @@ const Body = () => {
   const appRouter = createBrowserRouter([
     {
       path: "/",
-      element:(
+      element: (
         <>
-        <Header/>
-        <Login/>
+          <Header />
+          <Login />
         </>
       )
     },
@@ -29,11 +30,11 @@ const Body = () => {
       )
     },
     {
-      path:"/gpt",
-      element:(
+      path: "/gpt",
+      element: (
         <>
-        <Header/>
-        <GPTSearch/>
+          <Header />
+          <GPTSearch />
         </>
       )
     }
