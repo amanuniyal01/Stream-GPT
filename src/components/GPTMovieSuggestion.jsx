@@ -15,7 +15,9 @@ function GPTMovieSuggestion() {
   }
 
   return (
-    <div className='bg-black'>
+   <div className="bg-gradient-to-b from-black/95 via-black/80 to-black/60">
+
+
 
       {gptMovieNames.map((movieName, index) => (
         <MovieList
