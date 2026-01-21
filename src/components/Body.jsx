@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Browser from './Browser'
 import GPTSearch from './GPTSearch'
 import MovieList from './MovieList'
+import MovieDetails from './MovieDetails'
 
 
 const Body = () => {
@@ -37,7 +38,7 @@ const Body = () => {
           <GPTSearch />
         </>
       )
-    }
+    },
   ])
 
 
@@ -45,6 +46,7 @@ const Body = () => {
   return (
     <div>
       <RouterProvider router={appRouter} />
+         <MovieDetails />
     </div>
   )
 }
