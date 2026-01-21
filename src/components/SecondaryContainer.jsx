@@ -8,7 +8,7 @@ function SecondaryContainer() {
   const langKey=useSelector((store)=>store.lang.lang)
   return (
     movies.nowPlayingMovies && (
-      <div className='secondary -mt-50   '>
+      <div className='secondary -mt-45   '>
         <div className='relative  z-20'>  <MovieList title={lang[langKey].Playing} movies={movies.nowPlayingMovies} />
           <MovieList title={lang[langKey].Trending} movies={movies.TopRatedMovies} />
           <MovieList title={lang[langKey].Popular} movies={movies.nowPopularMovies} />

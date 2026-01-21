@@ -71,20 +71,21 @@ Dhamaal,Sultan,MAD,Dangal
 
 
   return (
-    <div className="z-30 pt-40  flex justify-center px-4">
+    <div className="z-30 pt-28 sm:pt-36 flex justify-center px-4">
+
       <form className="bg-white/10  backdrop-blur-md  w-full max-w-3xl border-white/10 rounded-lg p-4 flex flex-col sm:flex-row gap-2"
         onSubmit={(e) => e.preventDefault()}>
-
         <input
-          ref={SearchText}
+  ref={SearchText}
+  className=" flex-grow bg-white text-black font-bold px-3 py-2 text-sm sm:px-4 sm:py-3 sm:text-base rounded-lg   outline-none "
+  name="searchbar"
+  placeholder={lang[langKey].gptSearchBarText}
+  type="text"
+/>
 
-          className="flex-grow font-bold bg-white p-4 rounded-lg"
-          name="searchbar"
-          placeholder={lang[langKey].gptSearchBarText}
-          type="text"
-        />
 
-        <button className="bg-red-700 hover:bg-red-800 cursor-pointer text-white font-bold px-10 py-4 rounded-lg"
+
+        <button className="bg-red-700 hover:bg-red-800 transition-all cursor-pointer text-white font-bold px-6 sm:px-10 py-3 sm:py-4 rounded-lg whitespace-nowrap"
           type="button"
           onClick={handleGptApiSearch}>
 

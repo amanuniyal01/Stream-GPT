@@ -3,7 +3,7 @@ import MovieCard from './MovieCard'
 
 function MovieList({ title, movies }) {
   return (
-    <div className="px-6 py-4   ">
+    <div className="px-8 py-4   ">
 
       <h1 className=" title text-xl md:text-3xl font-bold text-white my-3 ">
         {title}

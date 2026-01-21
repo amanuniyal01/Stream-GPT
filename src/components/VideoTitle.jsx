@@ -14,7 +14,7 @@ function VideoTitle({ description, title }) {
         <div className="absolute inset-0  bg-gradient-to-r from-black  flex items-center">
 
     
-            <div className="w-full  px-6 sm:px-12 pb-20 pt-40">
+            <div className="w-full  px-6 sm:px-12 pb-20 pt-30 md:pt-40">
 
                 <h1
                     className="text-white text-3xl sm:text-4xl md:text-5xl font-bold"
@@ -23,7 +23,7 @@ function VideoTitle({ description, title }) {
                     {title}
                 </h1>
 
-                <p className="text-white text-sm sm:text-lg md:text-xl mt-4 w-full sm:w-3/4 md:w-1/2">
+                <p className="text-white text-sm sm:text-lg md:text-xl  mt-4 w-full sm:w-3/4 md:w-1/2">
                     {description}
                 </p>
 
