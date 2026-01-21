@@ -6,6 +6,7 @@ import Browser from './Browser'
 import GPTSearch from './GPTSearch'
 import MovieList from './MovieList'
 import MovieDetails from './MovieDetails'
+import Footer from './Footer'
 
 
 const Body = () => {
@@ -47,6 +48,7 @@ const Body = () => {
     <div>
       <RouterProvider router={appRouter} />
          <MovieDetails />
+         <Footer/>
     </div>
   )
 }
