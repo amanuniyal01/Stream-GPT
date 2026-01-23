@@ -48,7 +48,7 @@ const Body = () => {
     <div>
       <RouterProvider router={appRouter} />
          <MovieDetails />
-         <Footer/>
+      
     </div>
   )
 }

@@ -78,9 +78,45 @@ src/
 
 ## 📸 Screenshots
 
-_(Add screenshots of your login page, movie list, trailer modal, GPT search here)_
+Here’s a step-by-step walkthrough of the Stream-GPT app:
 
 ---
+
+### 1️⃣ Login Page
+
+Users can securely log in or sign up with Firebase Authentication.
+![Login Page](./screenshots/login.png)
+
+---
+
+### 2️⃣ Browser / Movie List Page
+
+Browse trending, popular, and recommended movies with Netflix-style cards.
+![Browser Page](./screenshots/browser.png)
+![Browser Page](./screenshots/browser2.png)
+
+
+---
+
+### 3️⃣ Movie Details & Trailer Modal
+
+Click on a movie to see details, cast, similar movies, and play trailers.
+![Movie Details](./screenshots/movieDetails.png)
+![Trailer Modal](./screenshots/trailerModal.png)
+
+---
+
+### 4️⃣ GPT Search
+
+Search movies using natural language with GPT integration.
+![GPT Search](./screenshots/gptSearch.png)
+
+---
+
+### 5️⃣ GPT Movie Recommendations
+
+View AI-powered recommendations based on your query.
+![GPT Movie Recommendations](./screenshots/gptMovie.png)
 
 ## 🛠️ Tech Stack
 

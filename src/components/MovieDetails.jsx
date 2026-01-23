@@ -76,9 +76,9 @@ function MovieDetails() {
 
                             {/* INFO */}
                             <div className='flex justify-between items-center'>
-                                <div> <h1 className="text-5xl font-bold">{details.title}</h1>
+                                <div className='flex flex-col gap-2'> <h1 className="text-4xl font-bold">{details.title}</h1>
 
-                                    <p className="mt-3 text-2xl max-w-150 text-gray-300">
+                                    <p className="mt-3 text-[20px] max-w-150 text-gray-300">
                                         {details.overview.split(" ").slice(0, 50).join(" ")}
                                         {details.overview.split(" ").length > 50 && "..."}
                                     </p>

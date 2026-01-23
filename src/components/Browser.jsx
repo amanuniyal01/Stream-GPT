@@ -7,6 +7,7 @@ import UseUpcomingMovies from "../Hooks/UseUpcomingMovies"
 import GPTSearch from "./GPTSearch"
 import MainContainer from "./MainContainer"
 import SecondaryContainer from "./SecondaryContainer"
+import Footer from "./Footer"
 
 const Browser = () => {
     const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
@@ -38,7 +39,7 @@ MovieContainer
                 </>
             }
 
-
+<Footer/>
         </div>
     )
 }
