@@ -1,162 +1,112 @@
-Stream-GPT – Authentication & Core Video Foundation (React + Firebase + Redux)
+# 🎬 Stream-GPT – Netflix-Inspired Movie Platform
 
-This project is a Netflix-inspired web application built using React, Firebase Authentication, Redux Toolkit, Tailwind CSS, and TMDB API.
-The goal of this project is to gradually build a production-ready Netflix-like platform, starting from authentication and moving toward real movie data, trailers, and GPT-based recommendations.
+[![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/)
+[![Redux](https://img.shields.io/badge/Redux-Toolkit-purple?logo=redux)](https://redux.js.org/)
+[![Firebase](https://img.shields.io/badge/Firebase-Auth-yellow?logo=firebase)](https://firebase.google.com/)
+[![TMDB](https://img.shields.io/badge/TMDB-API-green)](https://www.themoviedb.org/documentation/api)
 
-This README will be continuously updated as new features are added.
+Stream-GPT is a **Netflix-inspired web application** built using **React**, **Redux Toolkit**, **Firebase**, **Tailwind CSS**, and **TMDB API**.  
+It features **authentication, movie trailers, cast details, recommended movies, and GPT-powered search**.
 
-🚀 Features Implemented So Far
-🔐 Authentication System (Completed)
-✅ 1. Email & Password Signup
+---
 
-Users can create an account using email and password with proper validations:
+## 🚀 Features Implemented
 
-Valid email format
+### 🔐 Authentication
 
-Password length validation
+- Email & Password Signup + Validations
+- Email Verification Flow
+- Verified-only Login Protection
+- Persistent Auth State using Firebase Observer
+- Modern non-blocking notifications via `react-hot-toast`
 
-Error handling with custom Firebase messages
+### 🎬 Movie & Trailer System
 
-✅ 2. Email Verification Flow
+- Fetch movie details and trailers via TMDB API
+- Play Trailer in full-screen modal with ESC close support
+- Responsive YouTube iframe embed
+- Stop trailer automatically on close
+- Movie description truncation with "Read more / less"
 
-After signup:
+### 🎭 Cast & Similar Movies
 
-A verification email is sent automatically using Firebase
+- Top 12 cast members with images & roles
+- Scrollable "You’ll also like" section for similar movies
 
-User is signed out immediately after signup
+### 🤖 Stream-GPT Movie Recommendations (Upcoming)
 
-User must verify their email before being allowed to log in
+- GPT-powered natural language recommendations
+- Search by mood, genre, actor, or plot description
+- Integration with TMDB for real movie data
 
-This prevents fake or unverified accounts.
+### 🎨 UI / UX
 
-🔒 3. Verified-Only Login Protection
+- Tailwind CSS responsive design
+- Netflix-style buttons, typography, and layout
+- Dark-mode friendly hero sections
+- Smooth transitions and hover effects
 
-On login:
+---
 
-Firebase reloads the user using user.reload()
+## 🏗️ Project Structure
 
-emailVerified is checked
-
-If not verified:
-
-Login is blocked
-
-User is signed out
-
-Toast message is shown
-
-“Please verify your email before logging in.”
-
-This ensures only verified users can access protected routes.
-
-🎉 4. Modern Notifications (react-hot-toast)
-
-The project uses react-hot-toast instead of browser alerts:
-
-Success messages (signup, login)
-
-Error messages (auth errors, verification issues)
-
-Toasts are:
-
-Clean
-
-Non-blocking
-
-User-friendly
-
-🧭 5. Auth State Handling with Firebase Observer
-
-Implemented Firebase’s onAuthStateChanged:
-
-Automatically tracks user login/logout
-
-Syncs Firebase auth state with Redux
-
-Redirects users:
-
-Logged-in → /browse
-
-Logged-out → /
-
-This ensures persistent login state across refreshes.
-
-🗂️ Redux State Management (In Progress)
-✅ User Slice
-
-Stores authenticated user details (uid, email, displayName)
-
-Automatically updated on auth state change
-
-Cleared on logout
-
-🧩 Movie Slice (Foundation Added)
-
-Redux slice created for movie data
-
-Trailer video state added
-
-Will be expanded for:
-
-Now Playing
-
-Popular
-
-GPT recommendations
-
-🎬 Movie Trailer Fetching (TMDB API)
-✅ Trailer Fetch Logic
-
-Fetches movie videos using TMDB API
-
-Filters videos to get Trailer
-
-Falls back safely if trailer is missing
-
-Stores trailer data in Redux
-
-✅ YouTube Embed
-
-Trailer is rendered using YouTube iframe
-
-Autoplay + mute enabled
-
-Responsive aspect ratio
-
-This forms the hero background video like Netflix.
-
-🎨 UI & Styling
-
-Tailwind CSS for styling
-
-Responsive typography and layouts
-
-Netflix-style buttons
-
-Video title with text shadow
-
-Fully responsive across screen sizes
-
-🏗️ Project Structure (Current)
 src/
 │── components/
-│   ├── Login.jsx
-│   ├── Header.jsx
-│   ├── VideoTitle.jsx
-│   └── VideoBackground.jsx
+│ ├── Login.jsx
+│ ├── Header.jsx
+│ ├── VideoTitle.jsx
+│ ├── VideoBackground.jsx
+│ └── MovieDetails.jsx
 │
 │── hooks/
-│   └── useTrailerVideo.js (custom hook – WIP)
+│ └── useTrailerVideo.js
 │
 │── utils/
-│   ├── firebase.js
-│   ├── validate.js
-│   ├── constants.js
-│   ├── FirebaseErrors.js
-│   └── movieSlice.js
+│ ├── firebase.js
+│ ├── validate.js
+│ ├── constants.js
+│ ├── FirebaseErrors.js
+│ └── movieSlice.js
 │
 │── store/
-│   └── appStore.js
+│ └── appStore.js
 │
 │── App.js
 └── index.js
+
+---
+
+## 📸 Screenshots
+
+_(Add screenshots of your login page, movie list, trailer modal, GPT search here)_
+
+---
+
+## 🛠️ Tech Stack
+
+- React 18
+- Redux Toolkit
+- Firebase Auth
+- TMDB API
+- Tailwind CSS
+- React-hot-toast
+
+---
+
+## 🔮 Roadmap / Upcoming Features
+
+- Full GPT-powered movie search
+- Watchlist / My List functionality
+- Continue Watching / Resume playback
+- Accessibility & performance improvements
+- Smooth animations and focus traps
+
+---
+
+## 💼 Why This Project Matters
+
+- Demonstrates real-world **authentication flows**
+- Scalable **Redux architecture**
+- Clean **API integration and UI/UX**
+- Netflix-style experience
+- Strong talking points for **React & frontend interviews**
