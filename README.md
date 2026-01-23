@@ -102,7 +102,7 @@ Browse trending, popular, and recommended movies with Netflix-style cards.
 
 Click on a movie to see details, cast, similar movies, and play trailers.
 ![Movie Details](./screenshots/movieDetails.png)
-![Trailer Modal](./screenshots/trailerModal.png)
+
 
 ---
 
