@@ -8,12 +8,25 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => dispatch(toggleTheme())}
-      className="px-4 py-2 rounded-xl 
-                 bg-red-200 dark:bg-gray-700 
-                 text-black dark:text-white
-                 transition-all duration-300"
+      className="
+        flex items-center gap-2
+        px-4 py-2 rounded-full
+        text-sm font-medium
+        border border-gray-300 dark:border-gray-600
+        bg-white dark:bg-[#1f1f1f]
+        text-gray-800 dark:text-gray-100
+        hover:bg-gray-100 dark:hover:bg-[#2a2a2a]
+        active:scale-95
+        transition-all duration-200
+        shadow-sm hover:shadow-md
+      "
     >
-      {mode === "light" ? "🌙 Dark Mode" : "☀ Light Mode"}
+      <span className="text-base">
+        {mode === "light" ? "🌙" : "☀️"}
+      </span>
+      <span>
+        {mode === "light" ? "Dark mode" : "Light mode"}
+      </span>
     </button>
   );
 };

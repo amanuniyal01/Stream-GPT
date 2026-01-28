@@ -5,7 +5,7 @@ function MovieList({ title, movies }) {
   return (
     <div className="px-8 py-4   ">
 
-      <h1 className=" title text-xl md:text-3xl font-bold text-white my-3 ">
+      <h1 className=" title text-xl md:text-3xl font-bold text-black dark:text-white my-3 ">
         {title}
       </h1>
 

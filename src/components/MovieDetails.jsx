@@ -38,8 +38,8 @@ function MovieDetails() {
 
     if (!isOpen) return null;
     return (
-        <div className="fixed  inset-0 bg-black flex justify-center items-center overflow-y-auto z-50">
-            <div className="bg-black text-white rounded-xl p-6 w-full h-full  relative">
+        <div className="fixed  inset-0 bg-white dark:bg-black flex justify-center items-center overflow-y-auto z-50">
+            <div className="bg-white dark:bg-black text-black dark:text-white rounded-xl p-6 w-full h-full  relative">
                 <button
                     className="absolute z-50 top-4 right-4 font-bold  text-red-500 text-6xl"
                     onClick={() => {
@@ -75,7 +75,7 @@ function MovieDetails() {
 
 
                             {/* INFO */}
-                            <div className='flex justify-between items-center'>
+                            <div className='flex justify-between items-center md:flex-col flex-row'>
                                 <div className='flex flex-col gap-2'> <h1 className="text-4xl font-bold">{details.title}</h1>
 
                                     <p className="mt-3 text-[20px] max-w-150 text-gray-300">
@@ -91,7 +91,7 @@ function MovieDetails() {
 
                         </div>
 
-                        <h2 className="text-4xl mt-15 font-bold mb-3 mx-4 sm:mx-12 text-white">
+                        <h2 className="text-4xl mt-15 font-bold mb-3 mx-4 sm:mx-12 text-black dark:text-white">
                             Cast
                         </h2>
 
@@ -109,7 +109,7 @@ function MovieDetails() {
 
                         </div>
                         {/* SIMILAR MOVIES */}
-                        <h2 className="text-4xl text-shadow-white mt-20  font-bold mb-3 mx-4 sm:mx-12 text-white">
+                        <h2 className="text-4xl text-shadow-white mt-20  font-bold mb-3 mx-4 sm:mx-12 text-black dark:text-white">
                             You'll Also Like
                         </h2>
 

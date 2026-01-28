@@ -16,12 +16,7 @@ body{
 }
 
 .secondary {
-    background-image:
-        linear-gradient(to bottom,
-            rgb(0, 0, 0),
-            rgba(0, 0, 0, 0.9),
-            rgba(0, 0, 0, 1)),
-        url('./images/background.jpg');
+
 
     background-size: cover;
     background-position: center;
