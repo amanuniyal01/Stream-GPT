@@ -9,6 +9,7 @@ import { toggleGptSearch } from "../utils/gptSlice";
 import { LANGUAGE_OPTION } from "../utils/constants";
 import { changeLanguage } from "../utils/ConfigSlice";
 import lang from "../utils/languageConstant";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ const Header = () => {
         dispatch(removeUser());
         setMenuOpen(false);
       })
-      .catch(() => {});
+      .catch(() => { });
   };
 
   useEffect(() => {
@@ -92,14 +93,14 @@ const Header = () => {
                 </option>
               ))}
             </select>
+            <ThemeToggle />
 
             <button
               onClick={ToggleGptFunction}
-              className={`${
-                showGptSearch
+              className={`${showGptSearch
                   ? "bg-red-600 hover:bg-red-700"
                   : "bg-blue-600 hover:bg-blue-700"
-              } text-white font-semibold px-4 py-2 rounded-lg shadow-lg`}
+                } text-white font-semibold px-4 py-2 rounded-lg shadow-lg`}
             >
               {showGptSearch
                 ? `🏠 ${lang[langKey].Home}`
@@ -139,14 +140,13 @@ const Header = () => {
               </option>
             ))}
           </select>
-
+          
           <button
             onClick={ToggleGptFunction}
-            className={`${
-              showGptSearch
+            className={`${showGptSearch
                 ? "bg-red-600 hover:bg-red-700"
                 : "bg-blue-600 hover:bg-blue-700"
-            } text-white px-4 py-2 rounded-lg`}
+              } text-white px-4 py-2 rounded-lg`}
           >
             {showGptSearch
               ? `🏠 ${lang[langKey].Home}`
