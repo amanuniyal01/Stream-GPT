@@ -87,13 +87,14 @@ const Login = () => {
       <div className="h-[100vh] w-[100vw] relative">
         <img
           src="https://assets.nflxext.com/ffe/siteui/vlv3/30c8b9f4-3db9-4b3b-a1ee-8fa56531b712/web/IN-en-20251201-TRIFECTA-perspective_c7623e8e-c406-43d2-9d9a-0140ce19ac84_medium.jpg"
-          alt="Netflix Hero"
+          alt="stream-gpt Hero"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       </div>
 
       <form
+      
         onSubmit={(e) => e.preventDefault()}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
         opacity-65 bg-black text-white flex flex-col md:p-15 p-10 md:w-[60%] md:h-[75%] w-[90%] max-w-md rounded-lg shadow-lg"
@@ -151,7 +152,7 @@ const Login = () => {
             </span>
           ) : (
             <span>
-              New to Netflix?{" "}
+              New to Stream-GPT?{" "}
               <a onClick={ToggleSignUp} className="text-white hover:underline cursor-pointer">
                 Sign Up Now
               </a>

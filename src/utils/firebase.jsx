@@ -5,9 +5,9 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAi9KV8ED4kUFNcA4AwFbbeyUDy_synJ1o",
-  authDomain: "netflixgpt-9a3e7.firebaseapp.com",
-  projectId: "netflixgpt-9a3e7",
-  storageBucket: "netflixgpt-9a3e7.appspot.com",
+  authDomain: "stream-gptgpt-9a3e7.firebaseapp.com",
+  projectId: "stream-gptgpt-9a3e7",
+  storageBucket: "stream-gptgpt-9a3e7.appspot.com",
   messagingSenderId: "980883161529",
   appId: "1:980883161529:web:2a1bb0398e5175a330f668",
   measurementId: "G-ZKKCYKCD0K",

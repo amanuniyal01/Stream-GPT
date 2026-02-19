@@ -1,4 +1,4 @@
-// export const LOGO = "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svgF";
+// export const LOGO = "https://upload.wikimedia.org/wikipedia/commons/0/08/stream-gpt_2015_logo.svgF";
 
 export const API_OPTIONS = {
     method: 'GET',

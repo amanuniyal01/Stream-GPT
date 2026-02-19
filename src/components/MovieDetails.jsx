@@ -145,7 +145,7 @@ function MovieDetails() {
 
             <iframe
               className="w-full h-full"
-              src={`https://www.youtube.com/embed/${trailer.key}?autoplay=1&mute=1`}
+              src={`https://www.youtube.com/embed/${trailer.key}?autoplay=0&mute=1`}
               allow="autoplay; encrypted-media; fullscreen"
               title="Trailer"
               allowFullScreen

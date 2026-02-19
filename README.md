@@ -1,11 +1,11 @@
-# 🎬 Stream-GPT – Netflix-Inspired Movie Platform
+# 🎬 Stream-GPT – stream-gpt-Inspired Movie Platform
 
 [![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-Toolkit-purple?logo=redux)](https://redux.js.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-Auth-yellow?logo=firebase)](https://firebase.google.com/)
 [![TMDB](https://img.shields.io/badge/TMDB-API-green)](https://www.themoviedb.org/documentation/api)
 
-Stream-GPT is a **Netflix-inspired web application** built using **React**, **Redux Toolkit**, **Firebase**, **Tailwind CSS**, and **TMDB API**.  
+Stream-GPT is a **stream-gpt-inspired web application** built using **React**, **Redux Toolkit**, **Firebase**, **Tailwind CSS**, and **TMDB API**.  
 It features **authentication, movie trailers, cast details, recommended movies, and GPT-powered search**.
 
 ---
@@ -42,7 +42,7 @@ It features **authentication, movie trailers, cast details, recommended movies, 
 ### 🎨 UI / UX
 
 - Tailwind CSS responsive design
-- Netflix-style buttons, typography, and layout
+- stream-gpt-style buttons, typography, and layout
 - Dark-mode friendly hero sections
 - Smooth transitions and hover effects
 
@@ -91,7 +91,7 @@ Users can securely log in or sign up with Firebase Authentication.
 
 ### 2️⃣ Browser / Movie List Page
 
-Browse trending, popular, and recommended movies with Netflix-style cards.
+Browse trending, popular, and recommended movies with stream-gpt-style cards.
 ![Browser Page](./screenshots/browser.png)
 ![Browser Page](./screenshots/browser2.png)
 
@@ -144,5 +144,5 @@ View AI-powered recommendations based on your query.
 - Demonstrates real-world **authentication flows**
 - Scalable **Redux architecture**
 - Clean **API integration and UI/UX**
-- Netflix-style experience
+- stream-gpt-style experience
 - Strong talking points for **React & frontend interviews**

@@ -58,12 +58,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-gradient-to-b from-black z-50 px-6 py-3">
       {/* Top Bar */}
-      <div className="flex items-center justify-between">
+      <div className="flex  items-center justify-between">
         {/* Logo */}
         <img
-          className="h-8 md:h-12"
-          src="https://i.ibb.co/SNKRx9w/Netflixlogo.png"
-          alt="Netflix Logo"
+          className="h-10 opacity-65 rounded-full md:h-25"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwaPBM1odchBGJN7vGVmXQXYhC503n04kHeQ&s"
+          alt="stream-gpt Logo"
         />
 
         {/* Hamburger (Mobile Only) */}
