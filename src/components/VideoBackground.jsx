@@ -15,7 +15,7 @@ function VideoBackground({ movieId }) {
     src={
       "https://www.youtube.com/embed/" +
       trailerVideo?.key +
-      "?autoplay=0&mute=1&controls=0&rel=0"
+      "?autoplay=1&mute=1&controls=0&rel=0"
     }
     title="YouTube video player"
     allow="autoplay; encrypted-media"

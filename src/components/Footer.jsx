@@ -11,7 +11,7 @@ const Footer = () => {
         
         <div>
           <h2 className="text-white text-xl font-bold mb-3">
-            Stream-GPT
+            filmAI
           </h2>
           <p className="text-sm font-semibold leading-relaxed">
             This project is built for educational and portfolio purposes.
@@ -37,7 +37,7 @@ const Footer = () => {
 
       
       <div className="text-center text-xs text-gray-500 mt-8 border-t border-gray-800 pt-4">
-        © {new Date().getFullYear()} StreamGPT • Built by Aman • All rights reserved
+        © {new Date().getFullYear()} filmAI • Built by Aman • All rights reserved
       </div>
 
     </footer>
