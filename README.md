@@ -1,11 +1,11 @@
-# 🎬 Stream-GPT – stream-gpt-Inspired Movie Platform
+# 🎬 FilmAI – AI Movie Platform
 
 [![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-Toolkit-purple?logo=redux)](https://redux.js.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-Auth-yellow?logo=firebase)](https://firebase.google.com/)
 [![TMDB](https://img.shields.io/badge/TMDB-API-green)](https://www.themoviedb.org/documentation/api)
 
-Stream-GPT is a **stream-gpt-inspired web application** built using **React**, **Redux Toolkit**, **Firebase**, **Tailwind CSS**, and **TMDB API**.  
+Stream-GPT is a **FilmAI web application** built using **React**, **Redux Toolkit**, **Firebase**, **Tailwind CSS**, and **TMDB API**.  
 It features **authentication, movie trailers, cast details, recommended movies, and GPT-powered search**.
 
 ---
@@ -33,7 +33,7 @@ It features **authentication, movie trailers, cast details, recommended movies, 
 - Top 12 cast members with images & roles
 - Scrollable "You’ll also like" section for similar movies
 
-### 🤖 Stream-GPT Movie Recommendations (Upcoming)
+### 🤖 FilmAI Movie Recommendations (Upcoming)
 
 - GPT-powered natural language recommendations
 - Search by mood, genre, actor, or plot description
